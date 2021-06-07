@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--======================= Basic domestic furniture ==============================-->
+  <ThingDef ParentName="FurnitureWithQualityBase">
+    <!-- HRC_Stool -->
+    <defName>HRC_Stool</defName>
+    <label>modular stool</label>
+    <description>A simple platform on which to sit.</description>
+    <uiIconPath>Things/Izzy_Furniture/HRC_Stool_Icon</uiIconPath>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Izzy_Furniture/HRC_Stool_Atlas</texPath>
+      <drawSize>(1,1)</drawSize>
+      <linkType>CornerFiller</linkType>
+      <linkFlags>
+        <li>Custom4</li>
+      </linkFlags>
+    </graphicData>
+    <placingDraggableDimensions>1</placingDraggableDimensions>
+    <costStuffCount>15</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <fillPercent>0.30</fillPercent>
+    <pathCost>30</pathCost>
+    <building>
+      <isSittable>true</isSittable>
+    </building>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <altitudeLayer>Building</altitudeLayer>
+    <statBases>
+      <MaxHitPoints>75</MaxHitPoints>
+      <WorkToMake>750</WorkToMake>
+      <Flammability>1.0</Flammability>
+      <Beauty>3</Beauty>
+      <Comfort>0.5</Comfort>
+      <Mass>3</Mass>
+    </statBases>
+  </ThingDef>
+  <ThingDef ParentName="FurnitureWithQualityBase">
+    <!--HRC_FancyStool-->
+    <defName>HRC_FancyStool</defName>
+    <label>modular fancy stool</label>
+    <description>A comfortable and attractive platform on which to sit.</description>
+    <researchPrerequisites>
+      <li>BeautificationProject</li>
+    </researchPrerequisites>
+    <uiIconPath>Things/Izzy_Furniture/HRC_FancyStool_Icon</uiIconPath>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Izzy_Furniture/HRC_FancyStool_Atlas</texPath>
+      <drawSize>(1,1)</drawSize>
+      <linkType>CornerFiller</linkType>
+      <linkFlags>
+        <li>Custom3</li>
+      </linkFlags>
+    </graphicData>
+    <placingDraggableDimensions>1</placingDraggableDimensions>
+    <costStuffCount>60</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <fillPercent>0.30</fillPercent>
+    <pathCost>30</pathCost>
+    <building>
+      <isSittable>true</isSittable>
+    </building>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <altitudeLayer>Building</altitudeLayer>
+    <statBases>
+      <MaxHitPoints>170</MaxHitPoints>
+      <WorkToMake>6000</WorkToMake>
+      <Flammability>1.0</Flammability>
+      <Beauty>7</Beauty>
+      <Comfort>0.70</Comfort>
+      <Mass>3</Mass>
+    </statBases>
+  </ThingDef>
+  <!-- Table  -->
+  <ThingDef ParentName="TableBase">
+    <defName>HRC_Table</defName>
+    <label>modular table</label>
+    <graphicData>
+      <texPath>Things/Izzy_Furniture/HRC_Table_Atlas</texPath>
+      <linkType>CornerFiller</linkType>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+      <linkFlags>
+        <li>Custom6</li>
+      </linkFlags>
+    </graphicData>
+    <uiIconPath>Things/Izzy_Furniture/HRC_Table_Icon</uiIconPath>
+    <placingDraggableDimensions>2</placingDraggableDimensions>
+    <statBases>
+      <MaxHitPoints>25</MaxHitPoints>
+      <WorkToMake>400</WorkToMake>
+      <Flammability>1.0</Flammability>
+      <Beauty>3</Beauty>
+      <Mass>5</Mass>
+    </statBases>
+    <size>(1,1)</size>
+    <costStuffCount>15</costStuffCount>
+    <rotatable>false</rotatable>
+  </ThingDef>
+  <!-- Table fancy  -->
+  <ThingDef ParentName="TableBase">
+    <defName>HRC_TableFancy</defName>
+    <label>modular fancy table</label>
+    <researchPrerequisites>
+      <li>BeautificationProject</li>
+    </researchPrerequisites>
+    <graphicData>
+      <texPath>Things/Izzy_Furniture/HRC_FancyTable_Atlas</texPath>
+      <linkType>CornerFiller</linkType>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+      <linkFlags>
+        <li>Custom5</li>
+      </linkFlags>
+    </graphicData>
+    <uiIconPath>Things/Izzy_Furniture/HRC_FancyTable_Icon</uiIconPath>
+    <placingDraggableDimensions>2</placingDraggableDimensions>
+    <statBases>
+      <MaxHitPoints>35</MaxHitPoints>
+      <WorkToMake>650</WorkToMake>
+      <Flammability>1.0</Flammability>
+      <Beauty>12</Beauty>
+      <Mass>5</Mass>
+    </statBases>
+    <size>(1,1)</size>
+    <costStuffCount>15</costStuffCount>
+    <rotatable>false</rotatable>
+  </ThingDef>
+</Defs>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Izzyssentials</name>
+  <author>IzzyHRC</author>
+  <url>https://www.youtube.com/user/IzzyHRCsVids</url>
+  <targetVersion>0.16.1393</targetVersion>
+  <description>
+    Version 1.16.0
+
+    The Base on which Izzyssentials runs.
+    Load it before the other Izzyssentials addons.
+</description>
+</ModMetaData>

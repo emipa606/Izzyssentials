@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- ======================== Lighting ======================= -->
+  <ThingDef Abstract="True" Name="IzzyssentialsLampsBase" ParentName="LampBase">
+    <thingClass>Izzyssentials.Building_Glow</thingClass>
+    <costStuffCount>5</costStuffCount>
+    <costList>
+      <Steel>10</Steel>
+    </costList>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>75</basePowerConsumption>
+        <shortCircuitInRain>false</shortCircuitInRain>
+        <soundPowerOn>Power_OnSmall</soundPowerOn>
+        <soundPowerOff>Power_OffSmall</soundPowerOff>
+      </li>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <statBases>
+      <WorkToMake>170</WorkToMake>
+      <Flammability>1.0</Flammability>
+      <Mass>4</Mass>
+    </statBases>
+  </ThingDef>
+  <!-- HRC_StandingLamp -->
+  <ThingDef ParentName="IzzyssentialsLampsBase">
+    <defName>HRC_StandingLamp</defName>
+    <label>advanced standing lamp</label>
+    <description>Standing lamp that lights an area, can be color controlled with the right research.</description>
+    <graphicData>
+      <texPath>Things/Izzy_Lights/HRC_LampStanding</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+        <offset>(0,0,-0.1)</offset>
+      </shadowData>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>12</glowRadius>
+        <glowColor>(217,217,208,0)</glowColor>
+      </li>
+      <li>
+        <compClass>Izzyssentials.CompGlowerColour</compClass>
+      </li>
+    </comps>
+    <researchPrerequisites>
+      <li>Electricity</li>
+    </researchPrerequisites>
+  </ThingDef>
+  <!-- HRC_FloorLamp -->
+  <ThingDef ParentName="IzzyssentialsLampsBase">
+    <defName>HRC_FloorLamp</defName>
+    <label>advanced floor lamp</label>
+    <description>A Floor lamp that lights an area, can be color controlled with the right research.</description>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Standable</passability>
+    <graphicData>
+      <texPath>Things/Izzy_Lights/HRC_Floor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+        <offset>(0,0,-0.1)</offset>
+      </shadowData>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>12</glowRadius>
+        <glowColor>(217,217,208,0)</glowColor>
+      </li>
+      <li>
+        <compClass>Izzyssentials.CompGlowerColour</compClass>
+      </li>
+    </comps>
+    <researchPrerequisites>
+      <li>Electricity</li>
+    </researchPrerequisites>
+  </ThingDef>
+  <!-- HRC_CeilingLamp -->
+  <ThingDef ParentName="IzzyssentialsLampsBase">
+    <defName>HRC_CeilingLamp</defName>
+    <label>Ceiling lamp</label>
+    <description>A ceiling lamp that lights an area.</description>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Blueprint</altitudeLayer>
+    <passability>Standable</passability>
+    <placeWorkers>
+      <li>Izzyssentials.PlaceWorker_CeilingLamp</li>
+    </placeWorkers>
+    <graphicData>
+      <texPath>Things/Izzy_Lights/HRC_CeilingLight</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+        <offset>(0,0,-0.1)</offset>
+      </shadowData>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>12</glowRadius>
+        <glowColor>(217,217,208,0)</glowColor>
+      </li>
+      <li>
+        <compClass>Izzyssentials.CompGlowerColour</compClass>
+      </li>
+    </comps>
+    <researchPrerequisites>
+      <li>Electricity</li>
+    </researchPrerequisites>
+  </ThingDef>
+  <!--========================= Walls =============================-->
+  <ThingDef ParentName="BuildingBase">
+    <defName>HRC_WallLight</defName>
+    <label>wall light</label>
+    <description>An impassable wall with an assortment of lights. Capable of holding up a roof.</description>
+    <thingClass>Izzyssentials.Building_Glow</thingClass>
+    <category>Building</category>
+    <graphicData>
+      <texPath>Things/Izzy_Lights/WallLight</texPath>
+      <graphicClass>Izzyssentials.Graphic_ColorWall</graphicClass>
+      <linkType>CornerFiller</linkType>
+      <shaderType>CutoutComplex</shaderType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+        <edgeTop>Damage/Edge</edgeTop>
+        <edgeBot>Damage/Edge</edgeBot>
+        <edgeLeft>Damage/Edge</edgeLeft>
+        <edgeRight>Damage/Edge</edgeRight>
+      </damageData>
+    </graphicData>
+    <placeWorkers>
+      <li>PlaceWorker_Conduit</li>
+    </placeWorkers>
+    <uiIconPath>Things/Izzy_Lights/HRC_WallLighted_Icon</uiIconPath>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <coversFloor>true</coversFloor>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <holdsRoof>true</holdsRoof>
+    <statBases>
+      <MaxHitPoints>350</MaxHitPoints>
+      <WorkToMake>175</WorkToMake>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <castEdgeShadows>true</castEdgeShadows>
+    <blockLight>true</blockLight>
+    <!-- <staticSunShadowHeight>1.0</staticSunShadowHeight> -->
+    <costStuffCount>5</costStuffCount>
+    <costList>
+      <Steel>10</Steel>
+    </costList>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <building>
+      <isInert>true</isInert>
+      <canPlaceOverWall>true</canPlaceOverWall>
+      <blueprintGraphicData>
+        <texPath>Things/Building/Linked/Wall_Blueprint_Atlas</texPath>
+      </blueprintGraphicData>
+    </building>
+    <designationCategory>Structure</designationCategory>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <placingDraggableDimensions>1</placingDraggableDimensions>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <fillPercent>1</fillPercent>
+    <damageMultipliers>
+      <li>
+        <damageDef>Bomb</damageDef>
+        <multiplier>3</multiplier>
+      </li>
+    </damageMultipliers>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <transmitsPower>true</transmitsPower>
+        <basePowerConsumption>75</basePowerConsumption>
+        <shortCircuitInRain>false</shortCircuitInRain>
+        <soundPowerOn>Power_OnSmall</soundPowerOn>
+        <soundPowerOff>Power_OffSmall</soundPowerOff>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>12</glowRadius>
+        <glowColor>(217,217,208,0)</glowColor>
+      </li>
+      <li>
+        <!--<compClass>Izzyssentials.CompGlowerColour</compClass>-->
+        <compClass>Izzyssentials.CompGlowerColour</compClass>
+      </li>
+    </comps>
+    <researchPrerequisites>
+      <li>Electricity</li>
+    </researchPrerequisites>
+    <tickerType>Normal</tickerType>
+  </ThingDef>
+</Defs>

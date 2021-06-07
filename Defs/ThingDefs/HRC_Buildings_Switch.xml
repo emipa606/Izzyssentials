@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>HRC_WallSwitch</defName>
+    <label>wall switch</label>
+    <thingClass>Izzyssentials.Building_HRC_Switch</thingClass>
+    <category>Building</category>
+    <description>Switches power on/off.</description>
+    <graphicData>
+      <texPath>Things/Izzy_Switch/WallSwitch</texPath>
+      <graphicClass>Izzyssentials.Graphic_ColorWall</graphicClass>
+      <linkType>CornerFiller</linkType>
+      <shaderType>CutoutComplex</shaderType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+        <edgeTop>Damage/Edge</edgeTop>
+        <edgeBot>Damage/Edge</edgeBot>
+        <edgeLeft>Damage/Edge</edgeLeft>
+        <edgeRight>Damage/Edge</edgeRight>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Izzy_Switch/HRC_WallSwitch_Icon</uiIconPath>
+    <building>
+      <allowWireConnection>false</allowWireConnection>
+      <canPlaceOverWall>true</canPlaceOverWall>
+      <blueprintGraphicData>
+        <texPath>Things/Building/Linked/Wall_Blueprint_Atlas</texPath>
+      </blueprintGraphicData>
+    </building>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <coversFloor>true</coversFloor>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <holdsRoof>true</holdsRoof>
+    <statBases>
+      <MaxHitPoints>350</MaxHitPoints>
+      <WorkToMake>200</WorkToMake>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <castEdgeShadows>true</castEdgeShadows>
+    <blockLight>true</blockLight>
+    <!-- <staticSunShadowHeight>1.0</staticSunShadowHeight> -->
+    <placingDraggableDimensions>0</placingDraggableDimensions>
+    <fillPercent>1</fillPercent>
+    <damageMultipliers>
+      <li>
+        <damageDef>Bomb</damageDef>
+        <multiplier>3</multiplier>
+      </li>
+    </damageMultipliers>
+    <costStuffCount>5</costStuffCount>
+    <costList>
+      <Steel>10</Steel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </costList>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTransmitter</compClass>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li>
+        <compClass>Izzyssentials.CompSensor</compClass>
+      </li>
+      <li Class="CompProperties_Flickable" />
+    </comps>
+    <researchPrerequisites>
+      <li>Electricity</li>
+    </researchPrerequisites>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>false</neverMultiSelect>
+    <tickerType>Normal</tickerType>
+    <designationCategory>Power</designationCategory>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>HRC_SensorSwitch</defName>
+    <label>Sensor switch</label>
+    <thingClass>Izzyssentials.Building_HRC_Switch</thingClass>
+    <category>Building</category>
+    <description>Switches power on/off.</description>
+    <graphicData>
+      <texPath>Things/Izzy_Switch/HRC_Sensor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+    </graphicData>
+    <building>
+      <allowWireConnection>false</allowWireConnection>
+    </building>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Standable</passability>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <WorkToMake>200</WorkToMake>
+      <Flammability>0.4</Flammability>
+    </statBases>
+    <placingDraggableDimensions>0</placingDraggableDimensions>
+    <costStuffCount>5</costStuffCount>
+    <costList>
+      <Steel>10</Steel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </costList>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTransmitter</compClass>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li>
+        <compClass>Izzyssentials.CompSensor</compClass>
+      </li>
+      <li Class="CompProperties_Flickable" />
+    </comps>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>false</neverMultiSelect>
+    <tickerType>Normal</tickerType>
+    <designationCategory>Power</designationCategory>
+    <designationHotKey>Misc2</designationHotKey>
+    <researchPrerequisites>
+      <li>Electricity</li>
+      <li>Sensor</li>
+    </researchPrerequisites>
+  </ThingDef>
+</Defs>

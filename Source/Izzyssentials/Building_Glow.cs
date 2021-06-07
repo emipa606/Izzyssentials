@@ -1,0 +1,118 @@
+﻿using System.Collections.Generic;
+using RimWorld;
+using UnityEngine;
+using Verse;
+
+namespace Izzyssentials
+{
+    public class Building_Glow : Building //17/07/16-R
+    {
+        private ColorInt Blackout;
+        private List<ThingComp> comps = new List<ThingComp>();
+
+        private CompGlowerColour glowerColour;
+        private ColorInt LedState;
+        private CompPowerTrader powerTrader;
+
+        private bool HasRoof
+        {
+            get
+            {
+                var num = 0;
+                var num2 = 0;
+                foreach (var current in this.OccupiedRect())
+                {
+                    num++;
+                    //if (Find.RoofGrid.Roofed(current))
+                    if (Map.roofGrid.Roofed(current))
+                    {
+                        num2++;
+                    }
+                }
+
+                if ((num - num2) / (float) num < 1)
+                {
+                    return true;
+                }
+
+                return false;
+            }
+        }
+
+
+        public override Color DrawColor
+        {
+            get
+            {
+                if (def.MadeFromStuff)
+                {
+                    return base.DrawColor;
+                }
+
+                return DrawColorTwo;
+            }
+        }
+
+        //Changes the colour of the current led
+        public override Color DrawColorTwo => Util.IntToColour(LedState);
+
+
+        public override void SpawnSetup(Map map, bool respawningAfterLoad)
+        {
+            base.SpawnSetup(map, respawningAfterLoad);
+
+            powerTrader = GetComp<CompPowerTrader>();
+            glowerColour = GetComp<CompGlowerColour>();
+
+            Blackout = new ColorInt(100, 100, 100, 255);
+            LedState = Blackout;
+        }
+
+        public override void Draw()
+        {
+            base.Draw();
+            //changing the actual colour
+            if (powerTrader.PowerOn)
+            {
+                if (LedState != activeColour())
+                {
+                    UpdateTex(activeColour());
+                }
+            }
+            else
+            {
+                if (LedState != Blackout)
+                {
+                    UpdateTex(Blackout);
+                }
+            }
+        }
+
+        public override void Tick()
+        {
+            base.Tick();
+            if (def.defName != "HRC_CeilingLamp")
+            {
+                return;
+            }
+
+            if (!HasRoof)
+            {
+                Destroy();
+            }
+        }
+
+        //just to ease my eyes from the otherwise long string of text
+        private ColorInt activeColour()
+        {
+            return ListOColours.colourList[glowerColour.ActiveColour].ColourValue;
+        }
+
+        private void UpdateTex(ColorInt col)
+        {
+            LedState = col;
+            Notify_ColorChanged();
+            Util.updateMap(Position, Map);
+        }
+    }
+}

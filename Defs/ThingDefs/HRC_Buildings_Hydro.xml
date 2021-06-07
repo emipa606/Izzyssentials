@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- ========== Hydroponics ==============-->
+  <ThingDef ParentName="BuildingBase">
+    <defName>HRC_HydroponicsBasin</defName>
+    <label>modular hydroponics basin</label>
+    <thingClass>Izzyssentials.Building_PlantBetterGrower</thingClass>
+    <graphicData>
+      <texPath>Things/Izzy_Hydro/HRC_Hydro_Atlas</texPath>
+      <linkType>CornerFiller</linkType>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+      <linkFlags>
+        <li>Custom8</li>
+      </linkFlags>
+    </graphicData>
+    <uiIconPath>Things/Izzy_Hydro/HRC_Hydro_Icon</uiIconPath>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>60</pathCost>
+    <castEdgeShadows>true</castEdgeShadows>
+    <placingDraggableDimensions>2</placingDraggableDimensions>
+    <constructEffect>ConstructMetal</constructEffect>
+    <statBases>
+      <WorkToMake>700</WorkToMake>
+      <MaxHitPoints>90</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <description>For growing food. Hydroponics basins grow a few plants quickly. The basin requires power to work, and plants will die if power is cut.</description>
+    <size>(1,1)</size>
+    <costList>
+      <Steel>25</Steel>
+    </costList>
+    <fertility>2.3</fertility>
+    <building>
+      <defaultPlantToGrow>Plant_Potato</defaultPlantToGrow>
+      <sowTag>Hydroponic</sowTag>
+      <blueprintGraphicData>
+        <texPath>Things/Building/Linked/Wall_Blueprint_Atlas</texPath>
+      </blueprintGraphicData>
+    </building>
+    <tickerType>Rare</tickerType>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>17</basePowerConsumption>
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_Flickable" />
+    </comps>
+    <researchPrerequisites>
+      <li>Hydroponics</li>
+      <li>Electricity</li>
+    </researchPrerequisites>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <designationCategory>Production</designationCategory>
+    <!-- <staticSunShadowHeight>0.03</staticSunShadowHeight> -->
+  </ThingDef>
+</Defs>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ResearchProjectDef>
+    <defName>BeautificationProject</defName>
+    <label>Beautification Project</label>
+    <description>Allows you to build tables and stools with a higher beauty rating.</description>
+    <baseCost>500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>4.90</researchViewY>
+  </ResearchProjectDef>
+</Defs>
