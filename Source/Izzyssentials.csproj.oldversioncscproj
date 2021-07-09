@@ -1,5 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputPath>..\..\Assemblies</OutputPath>
     <TargetFramework>net472</TargetFramework>
@@ -9,7 +8,6 @@
     <DebugType>None</DebugType>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="Krafs.Rimworld.Ref">
       <Version>*</Version>
@@ -17,5 +15,4 @@
       <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
   </ItemGroup>
-
 </Project>
