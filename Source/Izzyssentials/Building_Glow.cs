@@ -8,7 +8,7 @@ namespace Izzyssentials;
 public class Building_Glow : Building //17/07/16-R
 {
     private ColorInt Blackout;
-    private List<ThingComp> comps = new List<ThingComp>();
+    private List<ThingComp> comps = [];
 
     private CompGlowerColour glowerColour;
     private ColorInt LedState;
@@ -51,9 +51,9 @@ public class Building_Glow : Building //17/07/16-R
         LedState = Blackout;
     }
 
-    public override void Draw()
+    protected override void DrawAt(Vector3 drawLoc, bool flip = false)
     {
-        base.Draw();
+        base.DrawAt(drawLoc, flip);
         //changing the actual colour
         if (powerTrader.PowerOn)
         {

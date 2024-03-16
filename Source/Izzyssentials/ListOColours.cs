@@ -5,8 +5,8 @@ namespace Izzyssentials;
 
 public static class ListOColours //17/07/16-R
 {
-    public static readonly List<Colour> colourList = new List<Colour>
-    {
+    public static readonly List<Colour> colourList =
+    [
         new Colour("white", new ColorInt(217, 217, 217, 0)),
 
         new Colour("red", new ColorInt(255, 0, 0, 0)),
@@ -38,7 +38,7 @@ public static class ListOColours //17/07/16-R
         new Colour("fushia", new ColorInt(255, 0, 191, 0)),
         new Colour("rose", new ColorInt(255, 0, 127, 0)),
         new Colour("crimson", new ColorInt(255, 0, 63, 0))
-    };
+    ];
 
     public static ColorInt Red = colourList[1].ColourValue;
 

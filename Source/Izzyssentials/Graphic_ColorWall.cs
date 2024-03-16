@@ -40,10 +40,10 @@ public class Graphic_ColorWall : Graphic //17/07/16-R
         if (list.NullOrEmpty()) // Major graphic issues, had to
         {
             Log.Error($"Collection cannot init: No textures found at path {req.path}");
-            subGraphics = new[]
-            {
+            subGraphics =
+            [
                 BaseContent.BadGraphic
-            };
+            ];
             return;
         }
 
@@ -74,7 +74,7 @@ public class Graphic_ColorWall : Graphic //17/07/16-R
         //resets subgraphics and makes it the lenght of stuffappearances
         var allStuffAppearanceDefs = DefDatabase<StuffAppearanceDef>.AllDefsListForReading;
         subGraphics = new Graphic[allStuffAppearanceDefs.Count];
-        stuffAppearanceDefs = new List<StuffAppearanceDef>();
+        stuffAppearanceDefs = [];
 
         //Creates enu and gets all the values of StuffAppearance Smooth,Planks,Bricks
         var counter = 0;

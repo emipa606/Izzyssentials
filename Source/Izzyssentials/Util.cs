@@ -19,9 +19,9 @@ public class Util //17/07/16-R
 
     public static void updateMap(IntVec3 pos, Map map)
     {
-        map.mapDrawer.MapMeshDirty(pos, MapMeshFlag.Things);
-        map.mapDrawer.MapMeshDirty(pos, MapMeshFlag.GroundGlow);
-        map.glowGrid.MarkGlowGridDirty(pos);
+        map.mapDrawer.MapMeshDirty(pos, MapMeshFlagDefOf.Things);
+        map.mapDrawer.MapMeshDirty(pos, MapMeshFlagDefOf.GroundGlow);
+        map.glowGrid.DirtyCache(pos);
     }
 
     //provides a new Compglower
@@ -80,7 +80,7 @@ public class Util //17/07/16-R
         var newGlower = newCompGlower(parent, glowColour, glowRadius);
         list.Add(newGlower);
 
-        //replaced with an extention to thingWithComps... doesnt feel safe but hey
+        //replaced with an extention to thingWithComps... doesn't feel safe but hey
         parent.SetCompsIzzy(list);
 
         newGlower.UpdateLit(map);
@@ -124,4 +124,3 @@ public class Util //17/07/16-R
         return PinRadius;
     }
 }
-

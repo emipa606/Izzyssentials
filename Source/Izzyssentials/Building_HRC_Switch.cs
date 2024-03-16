@@ -117,9 +117,9 @@ public class Building_HRC_Switch : Building
         }
     }
 
-    public override void Draw() // maybe cleanup this code? looks like a spider for some reason
+    protected override void DrawAt(Vector3 drawLoc, bool flip = false)
     {
-        base.Draw();
+        base.DrawAt(drawLoc, flip);
         if (flickableComp.SwitchIsOn)
         {
             if (PowerComp.PowerNet.CurrentEnergyGainRate() == 0)

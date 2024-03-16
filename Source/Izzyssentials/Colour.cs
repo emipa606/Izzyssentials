@@ -2,14 +2,8 @@
 
 namespace Izzyssentials;
 
-public struct Colour
+public struct Colour(string a, ColorInt b)
 {
-    public readonly string colourName;
-    public ColorInt ColourValue;
-
-    public Colour(string a, ColorInt b)
-    {
-        colourName = a;
-        ColourValue = b;
-    }
+    public readonly string colourName = a;
+    public ColorInt ColourValue = b;
 }
