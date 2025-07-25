@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Sensor switch -->
+  <Sensor.label>Sensor switch</Sensor.label>
+  <!-- EN: Able to create an improved version of the regular switch, also automatically implements this function into wall switches. -->
+  <Sensor.description>Able to create an improved version of the regular switch, also automatically implements this function into wall switches.</Sensor.description>
+</LanguageData>

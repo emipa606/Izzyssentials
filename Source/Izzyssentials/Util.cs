@@ -21,7 +21,7 @@ public class Util //17/07/16-R
     {
         map.mapDrawer.MapMeshDirty(pos, MapMeshFlagDefOf.Things);
         map.mapDrawer.MapMeshDirty(pos, MapMeshFlagDefOf.GroundGlow);
-        map.glowGrid.DirtyCache(pos);
+        map.glowGrid.DirtyCell(pos);
     }
 
     //provides a new Compglower

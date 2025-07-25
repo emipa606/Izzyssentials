@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: modular hydroponics basin -->
+  <HRC_HydroponicsBasin.label>modular hydroponics basin</HRC_HydroponicsBasin.label>
+  <!-- EN: For growing food. Hydroponics basins grow a few plants quickly. The basin requires power to work, and plants will die if power is cut. -->
+  <HRC_HydroponicsBasin.description>For growing food. Hydroponics basins grow a few plants quickly. The basin requires power to work, and plants will die if power is cut.</HRC_HydroponicsBasin.description>
+</LanguageData>

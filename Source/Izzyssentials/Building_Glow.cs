@@ -71,7 +71,7 @@ public class Building_Glow : Building //17/07/16-R
         }
     }
 
-    public override void Tick()
+    protected override void Tick()
     {
         base.Tick();
         if (def.defName != "HRC_CeilingLamp")

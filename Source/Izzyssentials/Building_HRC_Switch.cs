@@ -41,10 +41,7 @@ public class Building_HRC_Switch : Building
             return;
         }
 
-        if (flickableComp == null)
-        {
-            flickableComp = GetComp<CompFlickable>();
-        }
+        flickableComp ??= GetComp<CompFlickable>();
 
         switchOnOld = !flickableComp.SwitchIsOn;
         UpdatePowerGrid();

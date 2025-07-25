@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: modular solar grid -->
+  <HRC_SolarGrid.label>modular solar grid</HRC_SolarGrid.label>
+  <!-- EN: Produces electricity from sunlight. Does not work in the dark. -->
+  <HRC_SolarGrid.description>Produces electricity from sunlight. Does not work in the dark.</HRC_SolarGrid.description>
+</LanguageData>

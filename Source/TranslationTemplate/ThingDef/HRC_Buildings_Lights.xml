@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Ceiling lamp -->
+  <HRC_CeilingLamp.label>Ceiling lamp</HRC_CeilingLamp.label>
+  <!-- EN: A ceiling lamp that lights an area. -->
+  <HRC_CeilingLamp.description>A ceiling lamp that lights an area.</HRC_CeilingLamp.description>
+  <!-- EN: advanced floor lamp -->
+  <HRC_FloorLamp.label>advanced floor lamp</HRC_FloorLamp.label>
+  <!-- EN: A Floor lamp that lights an area, can be color controlled with the right research. -->
+  <HRC_FloorLamp.description>A Floor lamp that lights an area, can be color controlled with the right research.</HRC_FloorLamp.description>
+  <!-- EN: advanced standing lamp -->
+  <HRC_StandingLamp.label>advanced standing lamp</HRC_StandingLamp.label>
+  <!-- EN: Standing lamp that lights an area, can be color controlled with the right research. -->
+  <HRC_StandingLamp.description>Standing lamp that lights an area, can be color controlled with the right research.</HRC_StandingLamp.description>
+  <!-- EN: wall light -->
+  <HRC_WallLight.label>wall light</HRC_WallLight.label>
+  <!-- EN: An impassable wall with an assortment of lights. Capable of holding up a roof. -->
+  <HRC_WallLight.description>An impassable wall with an assortment of lights. Capable of holding up a roof.</HRC_WallLight.description>
+</LanguageData>

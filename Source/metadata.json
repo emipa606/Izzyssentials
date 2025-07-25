@@ -2,5 +2,17 @@
   "Continued": true,
   "CanAdd": "0",
   "CanRemove": "2",
-  "PreviewVersion": "1.5"
+  "PreviewVersion": "1.6",
+  "Patches": false,
+  "Defs": true,
+  "Assemblies": true,
+  "LinesOfCode": 32129,
+  "LinesOfXML": 22701,
+  "CodeBaseSize": 75,
+  "LastXmlCleaning": "2025-07-25T16:23:21.5070635+02:00",
+  "SocialImageSet": true,
+  "SearchTags": [
+    " tables",
+    " stools"
+  ]
 }

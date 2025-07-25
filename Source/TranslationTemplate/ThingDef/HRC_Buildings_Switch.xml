@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Sensor switch -->
+  <HRC_SensorSwitch.label>Sensor switch</HRC_SensorSwitch.label>
+  <!-- EN: Switches power on/off. -->
+  <HRC_SensorSwitch.description>Switches power on/off.</HRC_SensorSwitch.description>
+  <!-- EN: wall switch -->
+  <HRC_WallSwitch.label>wall switch</HRC_WallSwitch.label>
+  <!-- EN: Switches power on/off. -->
+  <HRC_WallSwitch.description>Switches power on/off.</HRC_WallSwitch.description>
+</LanguageData>

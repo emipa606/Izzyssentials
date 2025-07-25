@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: modular fancy stool -->
+  <HRC_FancyStool.label>modular fancy stool</HRC_FancyStool.label>
+  <!-- EN: A comfortable and attractive platform on which to sit. -->
+  <HRC_FancyStool.description>A comfortable and attractive platform on which to sit.</HRC_FancyStool.description>
+  <!-- EN: modular stool -->
+  <HRC_Stool.label>modular stool</HRC_Stool.label>
+  <!-- EN: A simple platform on which to sit. -->
+  <HRC_Stool.description>A simple platform on which to sit.</HRC_Stool.description>
+  <!-- EN: modular table -->
+  <HRC_Table.label>modular table</HRC_Table.label>
+  <!-- EN: People eat off tables when chairs are placed facing them. -->
+  <HRC_Table.description>People eat off tables when chairs are placed facing them.</HRC_Table.description>
+  <!-- EN: modular fancy table -->
+  <HRC_TableFancy.label>modular fancy table</HRC_TableFancy.label>
+  <!-- EN: People eat off tables when chairs are placed facing them. -->
+  <HRC_TableFancy.description>People eat off tables when chairs are placed facing them.</HRC_TableFancy.description>
+</LanguageData>

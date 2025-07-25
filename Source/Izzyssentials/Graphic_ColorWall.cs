@@ -84,8 +84,8 @@ public class Graphic_ColorWall : Graphic //17/07/16-R
 
             foreach (var graphic2 in array)
             {
-                var array2 = graphic2?.MatSingle?.name?.Split('_');
-                var a = array2?[array2.Length - 1];
+                var array2 = graphic2?.MatSingle?.name.Split('_');
+                var a = array2?[^1];
                 if (a == stuffAppearance?.ToString())
                 {
                     graphic = graphic2;
