@@ -8,9 +8,8 @@ namespace Izzyssentials;
 
 public class Building_HRC_Switch : Building
 {
-    private CompFlickable flickableComp; //A13
-
     private ColorInt LedState;
+    private CompFlickable flickableComp; //A13
 
     private CompSensor sensorComp;
 
@@ -18,7 +17,6 @@ public class Building_HRC_Switch : Building
 
     public override bool TransmitsPowerNow => flickableComp.SwitchIsOn; //A13
 
-    //return this.switchOn;
     public override Color DrawColor => def.MadeFromStuff ? base.DrawColor : DrawColorTwo;
 
     public override Color DrawColorTwo => Util.IntToColour(LedState);
@@ -55,13 +53,12 @@ public class Building_HRC_Switch : Building
             if (typeof(Command_Toggle) != g.GetType())
             {
                 yield return g;
+                continue;
             }
-            else
+
+            if (!sensorComp.auto)
             {
-                if (!sensorComp.auto)
-                {
-                    yield return g;
-                }
+                yield return g;
             }
         }
     }

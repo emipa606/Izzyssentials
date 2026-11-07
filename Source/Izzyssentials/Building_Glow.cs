@@ -8,10 +8,10 @@ namespace Izzyssentials;
 public class Building_Glow : Building //17/07/16-R
 {
     private ColorInt Blackout;
+    private ColorInt LedState;
     private List<ThingComp> comps = [];
 
     private CompGlowerColour glowerColour;
-    private ColorInt LedState;
     private CompPowerTrader powerTrader;
 
     private bool HasRoof

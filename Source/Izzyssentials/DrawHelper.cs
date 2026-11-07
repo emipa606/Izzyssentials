@@ -3,7 +3,7 @@ using Verse;
 
 namespace Izzyssentials;
 
-public class DrawHelper
+public static class DrawHelper
 {
     public static void DrawRectangle(RectangleRequest r)
     {

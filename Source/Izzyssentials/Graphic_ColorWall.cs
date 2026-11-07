@@ -53,7 +53,7 @@ public class Graphic_ColorWall : Graphic //17/07/16-R
         foreach (var texture2D in list)
         {
             var texture2DName = $"{req.path}/{texture2D.name}";
-            if (texture2DName.EndsWith("m"))
+            if (texture2DName.EndsWith('m'))
             {
                 continue;
             }

@@ -5,7 +5,7 @@ using Verse;
 
 namespace Izzyssentials;
 
-public class Util //17/07/16-R
+public static class Util //17/07/16-R
 {
     public static Color IntToColour(ColorInt col)
     {
@@ -59,10 +59,6 @@ public class Util //17/07/16-R
             if (comp is CompGlower glower && oldGlower == null)
             {
                 CCL = glower;
-            }
-
-            if (typeof(CompPowerTrader) == comp.GetType())
-            {
             }
         }
 

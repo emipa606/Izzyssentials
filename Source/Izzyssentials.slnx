@@ -6,4 +6,18 @@
     <BuildType Name="Release" />
   </Configurations>
   <Project Path="Izzyssentials/Izzyssentials.csproj" />
+  <Folder Name="/XML/1.7/Defs/ResearchProjectDefs/">
+    <File Path="../1.7/Defs/ResearchProjectDefs/ResearchProjects_Furniture.xml" />
+    <File Path="../1.7/Defs/ResearchProjectDefs/ResearchProjects_Switch.xml" />
+  </Folder>
+  <Folder Name="/XML/About/">
+    <File Path="../About/about.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/ThingDefs/">
+    <File Path="../1.7/Defs/ThingDefs/HRC_Buildings_Furniture.xml" />
+    <File Path="../1.7/Defs/ThingDefs/HRC_Buildings_Hydro.xml" />
+    <File Path="../1.7/Defs/ThingDefs/HRC_Buildings_Lights.xml" />
+    <File Path="../1.7/Defs/ThingDefs/HRC_Buildings_Solar.xml" />
+    <File Path="../1.7/Defs/ThingDefs/HRC_Buildings_Switch.xml" />
+  </Folder>
 </Solution>
